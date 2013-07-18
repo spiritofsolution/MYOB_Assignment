@@ -61,6 +61,14 @@ namespace Zoo.AnimalMaker.Test
             dog.DailyFeedCost = 10.55M;
             Assert.AreEqual(10.55M, dog.DailyFeedCost);
         }
+
+        [TestCase()]
+        public void Dog_Name_Success()
+        {
+            var dog = AnimalMaker.Core.AnimalFactory.Make<Dog>();
+            dog.Name = "Pluto";
+            Assert.AreEqual("Pluto", dog.Name);
+        }
         #endregion
     }
 }

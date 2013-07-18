@@ -34,7 +34,7 @@ namespace Zoo.AnimalMaker.Test
         [TestCase()]
         public void Cat_SpeciesName_Success()
         {
-            var cat = AnimalMaker.Core.AnimalFactory.Make<Dog>();
+            var cat = AnimalMaker.Core.AnimalFactory.Make<Cat>();
             cat.SpeciesName = "Birman";
             Assert.AreEqual("Birman", cat.SpeciesName);
         }
@@ -42,7 +42,7 @@ namespace Zoo.AnimalMaker.Test
         [TestCase()]
         public void Cat_NumOfLegsNotNull_Success()
         {
-            var cat = AnimalMaker.Core.AnimalFactory.Make<Dog>();
+            var cat = AnimalMaker.Core.AnimalFactory.Make<Cat>();
             cat.NumberOfLegs = 4;
             Assert.IsNotNull(cat.NumberOfLegs);
         }
@@ -50,7 +50,7 @@ namespace Zoo.AnimalMaker.Test
         [TestCase()]
         public void Cat_NumOfLegs_Success()
         {
-            var cat = AnimalMaker.Core.AnimalFactory.Make<Dog>();
+            var cat = AnimalMaker.Core.AnimalFactory.Make<Cat>();
             cat.NumberOfLegs = 4;
             Assert.AreEqual(4, cat.NumberOfLegs.Value);
         }
@@ -58,9 +58,17 @@ namespace Zoo.AnimalMaker.Test
         [TestCase()]
         public void Cat_DailyFeedCost_Success()
         {
-            var cat = AnimalMaker.Core.AnimalFactory.Make<Dog>();
+            var cat = AnimalMaker.Core.AnimalFactory.Make<Cat>();
             cat.DailyFeedCost = 10.55M;
             Assert.AreEqual(10.55M, cat.DailyFeedCost);
+        }
+
+        [TestCase()]
+        public void Cat_Name_Success()
+        {
+            var cat = AnimalMaker.Core.AnimalFactory.Make<Cat>();
+            cat.Name = "Garfield";
+            Assert.AreEqual("Garfield", cat.Name);
         }
         #endregion 
     }
