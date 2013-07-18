@@ -11,6 +11,11 @@ namespace Zoo.AnimalMaker.Core.Lib
     /// </summary>
     public abstract class AnimalBase:IAnimal
     {
+        public virtual string Name
+        {
+            get;
+            set;
+        }
         public virtual string SpeciesName
         {
             get;

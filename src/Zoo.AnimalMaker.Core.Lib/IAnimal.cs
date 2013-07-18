@@ -11,6 +11,7 @@ namespace Zoo.AnimalMaker.Core.Lib
     /// </summary>
     public interface IAnimal
     {
+        string Name { get; set; }
         string SpeciesName { get; set; }
         int? NumberOfLegs { get; set; }
         decimal DailyFeedCost { get; set; }

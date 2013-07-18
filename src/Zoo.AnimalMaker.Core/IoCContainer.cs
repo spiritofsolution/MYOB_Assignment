@@ -20,16 +20,16 @@ namespace Zoo.AnimalMaker.Core
         /// <summary>
         /// Add type to the configuration map.
         /// </summary>
-        /// <typeparam name="TFrom">Interface type.</typeparam>
-        /// <typeparam name="TTo">Concrete implementation type.</typeparam>
-        public static void Register(Type TFrom, Type TTo)
+        /// <typeparam name="tFrom">Interface type.</typeparam>
+        /// <typeparam name="tTo">Concrete implementation type.</typeparam>
+        public static void Register(Type tFrom, Type tTo)
         {
             // Type can only be registered once.
-            if (map.ContainsKey(TFrom))
-                throw new AnimalMakerException(string.Format(ExceptionMessage.ExistingType, TFrom.FullName));
+            if (map.ContainsKey(tFrom))
+                throw new AnimalMakerException(string.Format(ExceptionMessage.ExistingType, tFrom.FullName));
 
             // Add type to the configuration map.
-            map.Add(TFrom, TTo);
+            map.Add(tFrom, tTo);
         }
 
         /// <summary>
